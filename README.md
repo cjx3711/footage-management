@@ -9,12 +9,12 @@ I have tested this on windows using the linux subsystem. I do not know if it wor
 
 ## Scripts
 
-`sort.py`
-This takes all the files in a directory and puts them into subdirectories based on the creation date.
-The folder will be named according to the date format YYMMDD
-It will create folders if required.
-It will not move a file if it already exists
-This is a destructive operation and will move the files.
+### sort.py
+- This takes all the files in a directory and puts them into subdirectories based on the creation date.
+- The folder will be named according to the date format `YYMMDD`
+- It will create folders if required.
+- It will not move a file if it already exists
+- This is a destructive operation and will move the files.
 
 For example:
 ```
@@ -34,10 +34,12 @@ After script
     004.mp4
 ```
 
-`merge.py`
-This takes all the files in subdirectories and moves them to the main directory. It is not recursive and only works on directories one level deep. It will not delete the folders.
-Only subfolders starting with a 6 digits will be processed.
-This is a destructive operation and will move the files.
+### merge.py
+- This takes all the files in subdirectories and moves them to the main directory.
+- It is not recursive and only works on directories one level deep.
+- It will not delete the folders.
+- Only subfolders starting with a 6 digits will be processed.
+- This is a destructive operation and will move the files.
 
 For example:
 ```
@@ -63,10 +65,10 @@ After script
     004.mp4
 ```
 
-`delete.py`
-This helps to delete all the .thm and .lrv files in the main folder and subfolders one level deep.
-Only subfolders starting with 6 digits will be processed
-It does not actually delete the files but rather moves it to a folder called `deleted` on the root.
+### delete.py
+- This helps to delete all the .thm and .lrv files in the main folder and subfolders one level deep.
+- Only subfolders starting with 6 digits will be processed
+- It does not actually delete the files but rather moves it to a folder called `deleted` on the root.
 ```
 Original
   002.mp4
@@ -96,8 +98,11 @@ After script
     004.thm
 ```
 
-`rename.py`
-This is specific to a workflow for GoPro cameras. The file exported by an app will be named something like `GX010733_1610964461492.MP4` while the same file from the camera is simply named `GX010733.MP4`. This goes through all the files in a directory and removes the bit after the `_`
+### rename.py
+- This is specific to a workflow for GoPro cameras.
+- The file exported by an app will be named something like `GX010733_1610964461492.MP4` while the same file from the camera is simply named `GX010733.MP4`.
+- It matches files that start with G and have a number, underscore and another number
+- This goes through all the files in a directory and removes the bit after the `_`
 
 ```
 Original
