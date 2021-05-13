@@ -3,6 +3,9 @@
 ## Overview
 I spend a lot of time trying to sort and manage my footage from my gopros and cameras. This is a repository to store all the python scripts that I need to organise my photos for me.
 
+## Running
+This is coded in python 3. To run it, simply go into the terminal and type `python3 file.py`
+I have tested this on windows using the linux subsystem. I do not know if it works on other OSes
 
 ## Scripts
 
@@ -10,6 +13,7 @@ I spend a lot of time trying to sort and manage my footage from my gopros and ca
 This takes all the files in a directory and puts them into subdirectories based on the creation date.
 The folder will be named according to the date format YYMMDD
 It will create folders if required.
+It will not move a file if it already exists
 This is a destructive operation and will move the files.
 
 For example:
