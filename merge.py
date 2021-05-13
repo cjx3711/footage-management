@@ -1,7 +1,5 @@
 # Refer to README.md for explainations
 import os
-import pathlib
-import datetime
 import time
 import re
 
@@ -14,6 +12,7 @@ folder_regex = re.compile(r'^\d{6}')
 folders = [f for f in os.listdir('.') if os.path.isdir(f)]
 for fo in folders:
   if re.match(folder_regex, fo):
+    folders_checked += 1
     # print(f"Folder detected: {fo}")
     files = [f for f in os.listdir(f'./{fo}') if os.path.isfile(f'./{fo}/{f}')]
     for f in files:
